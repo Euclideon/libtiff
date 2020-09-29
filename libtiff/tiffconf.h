@@ -9,6 +9,8 @@
 
 #if defined(_MSC_VER) || defined(__MINGW32__)
 #include "tiffconf_win32.h"
+#elif defined(__linux__)
+#include "tiffconf_linux.h"
 #endif
 
 #endif /* _TIFFCONF_ */

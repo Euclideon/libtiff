@@ -3,4 +3,6 @@
 
 #if defined(_MSC_VER) || defined(__MINGW32__)
 #include "tif_config_win32.h"
+#elif defined(__linux__)
+#include "tif_config_linux.h"
 #endif
