@@ -2,7 +2,6 @@ project "libtiff"
 	kind "StaticLib"
 	language "C++"
 	staticruntime "On"
-	tags { "libtiff-project" }
 
 	files 
 	{
