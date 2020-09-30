@@ -15,6 +15,8 @@
 #include "tiffconf_macOS.h"
 #elif defined(__ANDROID__)
 #include "tiffconf_android.h"
+#elif defined(EMSCRIPTEN)
+#include "tiffconf_emscripten.h"
 #endif
 
 #endif /* _TIFFCONF_ */

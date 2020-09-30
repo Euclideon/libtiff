@@ -9,4 +9,6 @@
 #include "tif_config_macOS.h"
 #elif defined(__ANDROID__)
 #include "tif_config_android.h"
+#elif defined(EMSCRIPTEN)
+#include "tif_config_emscripten.h"
 #endif
