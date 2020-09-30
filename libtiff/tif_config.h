@@ -7,4 +7,6 @@
 #include "tif_config_linux.h"
 #elif defined(__APPLE__)
 #include "tif_config_macOS.h"
+#elif defined(__ANDROID__)
+#include "tif_config_android.h"
 #endif

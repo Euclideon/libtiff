@@ -13,6 +13,8 @@
 #include "tiffconf_linux.h"
 #elif defined(__APPLE__)
 #include "tiffconf_macOS.h"
+#elif defined(__ANDROID__)
+#include "tiffconf_android.h"
 #endif
 
 #endif /* _TIFFCONF_ */
