@@ -5,4 +5,6 @@
 #include "tif_config_win32.h"
 #elif defined(__linux__)
 #include "tif_config_linux.h"
+#elif defined(__APPLE__)
+#include "tif_config_macOS.h"
 #endif

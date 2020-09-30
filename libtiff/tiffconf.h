@@ -11,6 +11,8 @@
 #include "tiffconf_win32.h"
 #elif defined(__linux__)
 #include "tiffconf_linux.h"
+#elif defined(__APPLE__)
+#include "tiffconf_macOS.h"
 #endif
 
 #endif /* _TIFFCONF_ */

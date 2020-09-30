@@ -1,5 +1,11 @@
-#ifndef TIFFCONF_WIN32_H__
-#define TIFFCONF_WIN32_H__
+/*
+  Configuration defines for installed libtiff.
+  This file maintained for backward compatibility. Do not use definitions
+  from this file in your programs.
+*/
+
+#ifndef TIFFCONF_MACOS_H__
+#define TIFFCONF_MACOS_H__
 
 /* Signed 16-bit type */
 #define TIFF_INT16_T signed short
@@ -8,7 +14,7 @@
 #define TIFF_INT32_T signed int
 
 /* Signed 64-bit type */
-#define TIFF_INT64_T signed long long
+#define TIFF_INT64_T signed long
 
 /* Signed 8-bit type */
 #define TIFF_INT8_T signed char
@@ -20,16 +26,16 @@
 #define TIFF_UINT32_T unsigned int
 
 /* Unsigned 64-bit type */
-#define TIFF_UINT64_T unsigned long long
+#define TIFF_UINT64_T unsigned long
 
 /* Unsigned 8-bit type */
 #define TIFF_UINT8_T unsigned char
 
 /* Unsigned size type */
-#define TIFF_SIZE_T unsigned long long
+#define TIFF_SIZE_T unsigned long
 
 /* Signed size type */
-#define TIFF_SSIZE_T signed long long
+#define TIFF_SSIZE_T signed long
 
 /* Pointer difference type */
 #define TIFF_PTRDIFF_T ptrdiff_t
@@ -40,14 +46,14 @@
    machine */
 #define HAVE_IEEEFP 1
 
-   /* Set the native cpu bit order (FILLORDER_LSB2MSB or FILLORDER_MSB2LSB) */
+/* Set the native cpu bit order (FILLORDER_LSB2MSB or FILLORDER_MSB2LSB) */
 #define HOST_FILLORDER FILLORDER_LSB2MSB
 
 /* Native cpu byte order: 1 if big-endian (Motorola) or 0 if little-endian
    (Intel) */
 #define HOST_BIGENDIAN 0
 
-   /* Support CCITT Group 3 & 4 algorithms */
+/* Support CCITT Group 3 & 4 algorithms */
 #define CCITT_SUPPORT 1
 
 /* Support JPEG compression (requires IJG JPEG library) */
@@ -67,25 +73,25 @@
 
 /* Support Old JPEG compresson (read contrib/ojpeg/README first! Compilation
    fails with unpatched IJG JPEG library) */
-   /* #undef OJPEG_SUPPORT */
+/* #undef OJPEG_SUPPORT */
 
-   /* Support Macintosh PackBits algorithm */
+/* Support Macintosh PackBits algorithm */
 #define PACKBITS_SUPPORT 1
 
 /* Support Pixar log-format algorithm (requires Zlib) */
-/* #undef PIXARLOG_SUPPORT */
+#define PIXARLOG_SUPPORT 1
 
 /* Support ThunderScan 4-bit RLE algorithm */
 #define THUNDER_SUPPORT 1
 
 /* Support Deflate compression */
-/* #undef ZIP_SUPPORT */
+#define ZIP_SUPPORT 1
 
 /* Support strip chopping (whether or not to convert single-strip uncompressed
    images to mutiple strips of ~8Kb to reduce memory usage) */
 #define STRIPCHOP_DEFAULT 1
 
-   /* Enable SubIFD tag (330) support */
+/* Enable SubIFD tag (330) support */
 #define SUBIFD_SUPPORT 1
 
 /* Treat extra sample as alpha (default enabled). The RGBA interface will
@@ -93,11 +99,11 @@
    packages produce RGBA files but don't mark the alpha properly. */
 #define DEFAULT_EXTRASAMPLE_AS_ALPHA 1
 
-   /* Pick up YCbCr subsampling info from the JPEG data stream to support files
-      lacking the tag (default enabled). */
+/* Pick up YCbCr subsampling info from the JPEG data stream to support files
+   lacking the tag (default enabled). */
 #define CHECK_JPEG_YCBCR_SUBSAMPLING 1
 
-      /* Support MS MDI magic number files as TIFF */
+/* Support MS MDI magic number files as TIFF */
 #define MDI_SUPPORT 1
 
 /*
@@ -112,4 +118,4 @@
 #define PHOTOSHOP_SUPPORT
 #define IPTC_SUPPORT
 
-#endif
+#endif /* _TIFFCONF_ */
