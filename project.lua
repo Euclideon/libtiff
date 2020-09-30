@@ -2,7 +2,7 @@ project "libtiff"
 	kind "StaticLib"
 	language "C++"
 	staticruntime "On"
-	tags { "vault-project" }
+	tags { "libtiff-project" }
 
 	files 
 	{
@@ -28,19 +28,10 @@ project "libtiff"
 
 	includedirs {  }
 
-	-- Linking
-	links { }
-
 	filter { "system:windows" }
 
 	filter { "system:linux" }
 
 	filter { }
-
-	filter { "options:coverage" }
-		buildoptions { "-fprofile-arcs", "-ftest-coverage" }
-		linkoptions { "-fprofile-arcs" }
-		optimize "Off"
-	filter {  }
 
 	targetdir "../../builds"
