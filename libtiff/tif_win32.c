@@ -156,7 +156,7 @@ static uint64
 _tiffSizeProc(thandle_t fd)
 {
 	ULARGE_INTEGER m;
-	if (GetFileSizeEx(fd,(PLARGE_INTEGER)&m))
+	if (GetFileSizeEx(fd,&m))
 		return(m.QuadPart);
 	else
 		return(0);
