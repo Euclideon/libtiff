@@ -28,11 +28,14 @@ project "libtiff"
   filter { "configurations:Release" }
     optimize "Full"
   
-  filter "system:windows"
+  filter { "system:windows or uwp" }
     defines { "_CRT_SECURE_NO_WARNINGS" }
     excludes { "libtiff/tif_unix.c" }
   
-  filter "system:not windows"
+  filter { "system:not windows", "system:not uwp" }
     excludes { "libtiff/tif_win32.c" }
+
+  filter { "system:uwp" }
+    staticruntime "Off"
   
   targetdir "../../builds"
